@@ -1,42 +1,105 @@
-#root {
-  max-width: 1280px;
+/* Root Variables */
+:root {
+  --bg-color: #312f2f;
+  --text-color: #a6d9f7;
+  --header-main-color: #84dccf;
+  --header-sub-color: #BF98a0;
+  --section-title-color: #BCCE0;
+  --link-color: #84dccf;
+
+  /* Fonts */
+  --font-main: 'Roboto', sans-serif;
+  --font-monospace: 'Source Code Pro', monospace;
+}
+
+/* Global styles */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-main);
+  margin: 0;
+  padding: 0;
+}
+
+/* Main app container */
+.app-container {
+  padding: 20px;
+  max-width: 800px;
   margin: 0 auto;
-  padding: 2rem;
+}
+
+/* Headers */
+.header-main {
+  color: var(--header-main-color);
+  font-size: 2.5em;
+  font-weight: bold;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.header-sub {
+  color: var(--header-sub-color);
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Section titles */
+.section-title {
+  font-size: 1.8em;
+  color: var(--section-title-color);
+  border-bottom: 1px solid var(--header-main-color);
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Skills section */
+.skills-section .skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-family: var(--font-monospace); /* Monospace font for skills */
 }
 
-.card {
-  padding: 2em;
+.skill-category {
+  display: flex;
+  flex-direction: column;
 }
 
-.read-the-docs {
-  color: #888;
+.skill-items {
+  font-size: 1em;
+  color: var(--text-color);
+}
+
+/* Socials */
+.socials-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+  font-size: 1.2em;
+  justify-content: center;
+}
+
+.socials-list a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.socials-list a:hover {
+  text-decoration: underline;
+}
+
+/* Projects section */
+.projects-section .project-item {
+  margin-bottom: 15px;
+}
+
+.project-title {
+  font-size: 1.3em;
+  color: var(--header-sub-color);
+}
+
+.project-description {
+  font-size: 1em;
+  color: var(--text-color);
 }
