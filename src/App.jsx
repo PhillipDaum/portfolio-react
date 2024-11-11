@@ -1,9 +1,9 @@
-import { useState } from 'react';
 import './App.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faFileAlt, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   // Skill categories and their contents
   const skills = [
     { category: "Programming Languages", items: ["JavaScript"] },
@@ -31,43 +31,42 @@ function App() {
 
   return (
     <div className="app-container">
-      {/* My Name */}
       <h1 className="header-main">Phil Daum</h1>
-      <h2 className="header-sub">Coding The Web</h2>
+      <section className="socials-section">
+        <ul className="socials-list">
+          <li><a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faGithub} /></a></li>
+          <li><a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faLinkedin} /></a></li>
+          <li><a href="https://yourresume.com" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faFileAlt} /></a></li>
+            {/* there isn't a leetcode in FA */}
+          {/* <li><a href="https://leetcode.com/yourusername" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faLeetcode} /> LeetCode</a></li> */}
+        </ul>
+      </section>
 
-      {/* Skills */}
       <section className="skills-section">
-        <h3 className="section-title">My Skills</h3>
         <div className="skills-list">
           {skills.map((skill, index) => (
             <div key={index} className="skill-category">
-              <h4 className="category-title">{skill.category}</h4>
-              <span className="skill-items">{skill.items.join(", ")}</span>
+              <h2 className="category-title">{skill.category}:</h2>
+              <p className="skill-items">{skill.items.join(", ")}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Socials */}
-      <section className="socials-section">
-        <h3 className="section-title">Connect with Me</h3>
-        <ul className="socials-list">
-          <li><a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-          <li><a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-          <li><a href="https://yourresume.com" target="_blank" rel="noopener noreferrer">Resume</a></li>
-          <li><a href="https://leetcode.com/yourusername" target="_blank" rel="noopener noreferrer">LeetCode</a></li>
-        </ul>
-      </section>
-
-      {/* Projects */}
       <section className="projects-section">
-        <h3 className="section-title">Projects</h3>
+        <h2 className="section-title">Projects</h2>
         {projects.map((project, index) => (
           <div key={index} className="project-item">
-            <h4 className="project-title">{project.title}</h4>
+            <h3 className="project-title">{project.title}</h3>
             <p className="project-description">{project.description}</p>
-            <a href={project.projectLink} target="_blank" rel="noopener noreferrer">View Project</a> | 
-            <a href={project.repoLink} target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+            <a href={project.projectLink} target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faExternalLinkAlt} /></a>
+            <a href={project.repoLink} target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faGithub} /></a>
           </div>
         ))}
       </section>
