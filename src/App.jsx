@@ -31,27 +31,31 @@ function App() {
 
   return (
     <div className="app-container">
-      <h1 className="header-main">Phil Daum</h1>
-      <section className="socials-section">
+
+      <section className="hero-section">
+        <h1>Phil Daum</h1>
         <ul className="socials-list">
-          <li><a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faGithub} /></a></li>
           <li><a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faLinkedin} /></a></li>
+            <FontAwesomeIcon className="fa-icon-large" icon={faLinkedin} /></a></li>
+          {/* ADD LINK TO RESUME */}
+          <li><a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon className="fa-icon-large" icon={faGithub} /></a></li>
           <li><a href="https://yourresume.com" target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faFileAlt} /></a></li>
-            {/* there isn't a leetcode in FA */}
+            <FontAwesomeIcon className="fa-icon-large" icon={faFileAlt} /></a></li>
+          {/* there isn't a leetcode in FA */}
           {/* <li><a href="https://leetcode.com/yourusername" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faLeetcode} /> LeetCode</a></li> */}
         </ul>
       </section>
 
       <section className="skills-section">
+        <h2>Skills</h2>
+        {/* maybe put in a box that looks like a paper */}
         <div className="skills-list">
           {skills.map((skill, index) => (
             <div key={index} className="skill-category">
-              <h2 className="category-title">{skill.category}:</h2>
-              <p className="skill-items">{skill.items.join(", ")}</p>
+              {/* add extra space between category and list */}
+              <h3 className="category-title">{skill.category}:  <span className="skill-items">{skill.items.join(", ")}</span></h3>
             </div>
           ))}
         </div>

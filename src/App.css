@@ -1,8 +1,12 @@
 :root {
-  --bg-color: #312f2f;
-  --text-color: #a6d9f7;
-  --header-main-color: #84dccf;
-  --header-sub-color: #BF98a0;
+  /* background */
+  --bg-primary: #312f2f;
+
+  /* text */
+  --text-main: #a6d9f7;
+  --headings: #84dccf;
+  --sub-heading: #BF98a0;
+
   --section-title-color: #BCCE0;
   --link-color: #84dccf;
 
@@ -11,97 +15,86 @@
   --font-monospace: 'Source Code Pro', monospace;
 }
 
+/* utility classes */
+
+/* typography */
+h2 {
+  color: var(--headings)
+}
+
+/* body and container */
 body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  background-color: var(--bg-primary);
+  color: var(--text-main);
   font-family: var(--font-main);
   margin: 0;
   padding: 0;
 }
-
 .app-container {
-  padding: 20px;
-  max-width: 800px;
+  padding: 1.2rem;
+  max-width: 950px;
   margin: 0 auto;
 }
 
-.header-main {
-  color: var(--header-main-color);
-  font-size: 2.5em;
+/* hero section */
+h1 {
+  color: var(--headings);
+  font-size: 2.5rem;
   font-weight: bold;
   text-align: center;
+  margin-bottom: 0;
 }
-
-.section-title {
-  font-size: 1.8em;
-  color: var(--section-title-color);
-  border-bottom: 1px solid var(--header-main-color);
-  margin-top: 20px;
-  margin-bottom: 10px;
+.fa-icon-large {
+  font-size: 2rem;
 }
-
-/* Socials section */
 .socials-list {
   list-style: none;
   padding: 0;
   display: flex;
-  gap: 10px;
+  gap: .8rem;
   justify-content: center;
 }
-
 .socials-list a {
   color: var(--link-color);
   text-decoration: none;
-  font-size: 1.2em;
+}
+.fa-icon-large:hover {
+  /* maybe change color */
+  color: var(--sub-heading)
+}
+.hero-section {
+  padding-bottom: 4rem;
+  padding-top: 2rem;
 }
 
-.socials-list a:hover {
-  text-decoration: underline;
-}
 
-.skills-section .skills-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
+/* Skills Section */
 .skill-category {
-  margin: 5px 0;
+  display: flex;
 }
-
+.skill-category h3 {
+  margin: .5rem;
+}
+.skills-section h2{
+  margin-bottom: 0;
+  padding-bottom: 0rem;
+}
 .category-title {
-  font-size: 1.1em;
+  color: var(--sub-heading);
   font-weight: bold;
-  color: var(--header-sub-color);
 }
-
 .skill-items {
+  color: var(--text-main);
   font-family: var(--font-monospace);
-  color: var(--text-color);
-  font-size: 1em;
+  font-weight: 300;
 }
 
-/* Projects section */
-.project-item {
-  margin-bottom: 10px;
-}
+/* Projects Section */
+/* maybe role, description, technologies, year, links, images later */
 
-.project-title {
-  font-size: 1.3em;
-  color: var(--header-sub-color);
-}
 
-.project-description {
-  font-size: 1em;
-  color: var(--text-color);
-}
 
-.project-item a {
-  color: var(--link-color);
-  text-decoration: none;
-  font-size: 1em;
-}
 
-.project-item a:hover {
-  text-decoration: underline;
-}
+
+
+

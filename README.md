@@ -13,6 +13,4 @@
 
 - add another section for projects where I can put other stuff
 -- hurricane harvey art
---- art website (sell leggings?)
-
 -- can I add some kind of invisible footer or just space at the bottom, so the content can go halfway up the screen
