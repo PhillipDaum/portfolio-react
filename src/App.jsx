@@ -168,32 +168,40 @@ function App() {
         </div>
       </section>
 
-     {/*  if .role if .aboutLink  */}
       <section className="projects-section">
         <h2 className="section-title">Projects</h2>
-        {projects.map((project, index) => (
-          <div key={index} className="project-card">
-            <h4 className="project-title">{project.title}</h4>
-            <p className="project-year">year: {project.year}</p>
-            { project.role != "" ? (
-              <p>role: {project.role}</p>
-            ) : (null)
-            }
-            <img src={project.image} alt={project.imageAlt} />
-            <p className="project-description">{project.description}</p>
-            <p className="project-technologies">technologies: {project.technologies}</p>
-            <a className="project-demo" href={project.demoLink} target="_blank" rel="noopener noreferrer">live demo</a>
-            <a className="project-repo" href={project.repoLink} target="_blank" rel="noopener noreferrer">repository</a>
-            {/* is there a better way to do this without the empty strings? */}
-            { project.aboutLink != "" ? (
-              <a className="project-role" href={project.aboutLink} target="_blank" rel="noopener noreferrer">about</a>
-            ) : (null)
-            } 
+        <div className="projects-container">
+          <div className="projects-grid">
+            {projects.map((project, index) => (
+              <div key={index} className="project-card">
+                <div className="card-top">
+                  <h4 className="project-title">{project.title}</h4>
+                  <p className="project-year">{project.year}</p>
+                  {project.role != "" ? (
+                    <p>{project.role}</p>
+                  ) : (null)
+                  }
+                </div>
+                {/* wrap this in an a tag with a link to live demo */}
+                <img src={project.image} alt={project.imageAlt} />
+                <p className="project-description">{project.description}</p>
+                <p className="project-technologies">technologies: {project.technologies}</p>
+                <div className="project-card-links">
+                  <a className="project-demo" href={project.demoLink} target="_blank" rel="noopener noreferrer">live demo</a>
+                  <a className="project-repo" href={project.repoLink} target="_blank" rel="noopener noreferrer">repository</a>
+                  {/* is there a better way to do this without the empty strings? */}
+                  {project.aboutLink != "" ? (
+                    <a className="project-role" href={project.aboutLink} target="_blank" rel="noopener noreferrer">about</a>
+                  ) : (null)
+                  }
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
       </section>
 
-      {/* additional section, art, hobbies, etc.  */}
+      {/* maybe additional section: art, hobbies, etc.  */}
 
     </div>
   );

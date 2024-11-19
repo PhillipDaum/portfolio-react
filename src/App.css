@@ -16,6 +16,7 @@
 }
 
 /* utility classes */
+/* none so far!  */
 
 /* typography */
 h2 {
@@ -90,11 +91,40 @@ h1 {
 }
 
 /* Projects Section */
-/* maybe role, description, technologies, year, links, images later */
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.project-card {
+  display: flex;
+  flex-direction: column;
+  max-width: 24rem;
+  padding-bottom: 1.5rem;
+}
+.project-card h4, p {
+  margin: .2rem;
+}
+.project-card .card-top {
+  display: flex;
+  gap: 2rem;
+}
+.project-card img {
+  max-width: 90%;
+}
+.project-card-links {
+  display: flex;
+  gap: 2rem;
+}
 
 
 
-
+/* media queries */
+/* only go to two columns, prolly no 3 columns */
 
 
 
