@@ -1,6 +1,7 @@
 :root {
   /* background */
   --bg-primary: #312f2f;
+  --bg-secondary: #84dccf;
 
   /* text */
   --text-main: #a6d9f7;
@@ -91,6 +92,9 @@ h1 {
 }
 
 /* Projects Section */
+/* consider some centering: images, text looks ragged */
+/* incorporate monospace text */
+/* work on spacing */
 .projects-container {
   display: flex;
   flex-direction: column;
@@ -120,11 +124,24 @@ h1 {
   display: flex;
   gap: 2rem;
 }
+.project-card-links a {
+  background: var(--bg-secondary);
+  text-decoration: none;
+  padding: .3rem;
+  /* change to variable */
+  color: black;
+}
 
 
 
 /* media queries */
 /* only go to two columns, prolly no 3 columns */
-
+/* can I add a condition that says if there are an odd # of cards, 
+put the bottom one in two cols? */
+@media (min-width: 650px) {
+  .projects-grid {
+      grid-template-columns: 1fr 1fr;
+  }
+}
 
 

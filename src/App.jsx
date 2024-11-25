@@ -9,11 +9,14 @@ function App() {
     { category: "Programming Languages", items: ["JavaScript"] },
     { category: "Web Technologies", items: ["React", "Node.js", "HTML", "CSS", "RESTful APIs", "Bootstrap", "WordPress"] },
     { category: "Tools & Platforms", items: ["Git", "GitHub", "Terminal/CLI", "Azure", "Generative AI"] },
-    { category: "Soft Skills", items: ["Teamwork", "Screen Sharing & Remote Collaboration", "Project Management"] },
+    { category: "Soft Skills", items: ["Public Speaking", "Teamwork", "Screen Sharing & Remote Collaboration", "Project Management"] },
   ];
 
   // Project details
   /// if role, if aboutLink 
+  // Focus Fox, Ice Cream Shop, Bento Box, Salary Calculator
+  // a NASA one? two?
+  // then the old one for more stuff. 
   const projects = [
     {
       title: "Focus Fox", // focus fox
@@ -21,7 +24,7 @@ function App() {
       // edit all descriptions
       description: "A short description of Project One.",
       technologies: "list", //add
-      role: "Developer",
+      role: "Lead Developer",
       image: "./src/img/portfolio-icecream.png",
       imageAlt: "whimsical and accessible ice cream order form with vibrant colors.",
       demoLink: "https://phillipdaum.github.io/cannons-coffee/", //fix
@@ -29,7 +32,7 @@ function App() {
       aboutLink: "https://focus-fox.github.io/focusfoxpresentation/index.html"
     },
     {
-      title: "Ice Cream", // bento grid
+      title: "Ice Cream Shop", // bento grid
       year: "2024",
       // edit all descriptions
       description: "A short description of Project One.",
@@ -42,7 +45,7 @@ function App() {
       aboutLink: ""
     },
     {
-      title: "Ice Cream", // old portfolio
+      title: "Bento Grid", // old portfolio
       year: "2024",
       // edit all descriptions
       description: "A short description of Project One.",
@@ -67,70 +70,70 @@ function App() {
       repoLink: "https://github.com/PhillipDaum/cannons-coffee",
       aboutLink: ""
     },
-    {
-      title: "Ice Cream",
-      year: "2024",
-      // edit all descriptions
-      description: "A short description of Project One.",
-      technologies: "list", //add
-      role: "",
-      image: "./src/img/portfolio-icecream.png",
-      imageAlt: "whimsical and accessible ice cream order form with vibrant colors.",
-      demoLink: "https://phillipdaum.github.io/cannons-coffee/", //fix
-      repoLink: "https://github.com/PhillipDaum/", //fix
-      aboutLink: ""
-    },
-    {
-      title: "Farmer's Market",
-      year: "2024",
-      // edit all descriptions
-      description: "Building on my experience from Cannon's Coffee, I developed this Farmer's Market website based on detailed client-like specifications, adding JavaScript elements, including a responsive hamburger menu.",
-      technologies: "list", //add
-      image: "./src/img/portfolio-fm.png",
-      imageAlt: "farmer's market site featuring images of farm-fresh produce.",
-      demoLink: "https://phillipdaum.github.io/cannons-coffee/", // fix
-      repoLink: "https://github.com/PhillipDaum/", //fix
-      aboutLink: ""
-    },
-    {
-      title: "City Picker",
-      year: "2024", // edit
-      // edit all descriptions
-      description: "City Picker came to life after I mastered loops. This project helps users find cities with the most sunshine during specific months, offering a practical tool for planning sunny getaways.",
-      technologies: "list", //add
-      role: "",
-      image: "./src/img/city-picker.png",
-      imageAlt: "site showing 'when and where is it sunny?' with a form for continent and month, listing cities by sunshine hours.", //edit
-      demoLink: "https://phillipdaum.github.io/city-picker/",
-      repoLink: "https://github.com/PhillipDaum/city-picker",
-      aboutLink: ""
-    },
-    {
-      title: "PhilDaum.art",
-      year: "2022", //edit, check
-      // edit desc
-      description: "After a 6-week course on Bootstrap, I revamped my art portfolio site to showcase my artwork in a clean, modern layout, reflecting my growth as both a developer and an artist.",
-      techololgies: "",
-      role: "",
-      image: "./src/img/portfolio-art.png",
-      imageAlt: "Screenshot of a tidy art portfolio site featuring a loud and colorful abstract painting.",
-      demoLink: "https://github.com/PhillipDaum/phildaum.art",
-      repoLink: "https://www.phildaum.art/",
-      aboutLink: ""
-    },
-    {
-      title: "Daily Horoscope",
-      year: "2024",
-      // edit desc
-      description: "While learning to manipulate data objects, I created this Daily Horoscope site to provide users with their daily zodiac predictions in a fun and engaging way.",
-      technologies: "",
-      role: "",
-      image: "./src/img/horoscope.png",
-      imageAlt: "Screenshot of a simple website displaying daily horoscopes with a cute purple theme.",
-      gitHub: "https://github.com/PhillipDaum/horoscopes",
-      gitHubPages: "https://phillipdaum.github.io/horoscopes/",
-      aboutLink: ""
-    }
+    // {
+    //   title: "Ice Cream",
+    //   year: "2024",
+    //   // edit all descriptions
+    //   description: "A short description of Project One.",
+    //   technologies: "list", //add
+    //   role: "",
+    //   image: "./src/img/portfolio-icecream.png",
+    //   imageAlt: "whimsical and accessible ice cream order form with vibrant colors.",
+    //   demoLink: "https://phillipdaum.github.io/cannons-coffee/", //fix
+    //   repoLink: "https://github.com/PhillipDaum/", //fix
+    //   aboutLink: ""
+    // },
+    // {
+    //   title: "Farmer's Market",
+    //   year: "2024",
+    //   // edit all descriptions
+    //   description: "Building on my experience from Cannon's Coffee, I developed this Farmer's Market website based on detailed client-like specifications, adding JavaScript elements, including a responsive hamburger menu.",
+    //   technologies: "list", //add
+    //   image: "./src/img/portfolio-fm.png",
+    //   imageAlt: "farmer's market site featuring images of farm-fresh produce.",
+    //   demoLink: "https://phillipdaum.github.io/cannons-coffee/", // fix
+    //   repoLink: "https://github.com/PhillipDaum/", //fix
+    //   aboutLink: ""
+    // },
+    // {
+    //   title: "City Picker",
+    //   year: "2024", // edit
+    //   // edit all descriptions
+    //   description: "City Picker came to life after I mastered loops. This project helps users find cities with the most sunshine during specific months, offering a practical tool for planning sunny getaways.",
+    //   technologies: "list", //add
+    //   role: "",
+    //   image: "./src/img/city-picker.png",
+    //   imageAlt: "site showing 'when and where is it sunny?' with a form for continent and month, listing cities by sunshine hours.", //edit
+    //   demoLink: "https://phillipdaum.github.io/city-picker/",
+    //   repoLink: "https://github.com/PhillipDaum/city-picker",
+    //   aboutLink: ""
+    // },
+    // {
+    //   title: "PhilDaum.art",
+    //   year: "2022", //edit, check
+    //   // edit desc
+    //   description: "After a 6-week course on Bootstrap, I revamped my art portfolio site to showcase my artwork in a clean, modern layout, reflecting my growth as both a developer and an artist.",
+    //   techololgies: "",
+    //   role: "",
+    //   image: "./src/img/portfolio-art.png",
+    //   imageAlt: "Screenshot of a tidy art portfolio site featuring a loud and colorful abstract painting.",
+    //   demoLink: "https://github.com/PhillipDaum/phildaum.art",
+    //   repoLink: "https://www.phildaum.art/",
+    //   aboutLink: ""
+    // },
+    // {
+    //   title: "Daily Horoscope",
+    //   year: "2024",
+    //   // edit desc
+    //   description: "While learning to manipulate data objects, I created this Daily Horoscope site to provide users with their daily zodiac predictions in a fun and engaging way.",
+    //   technologies: "",
+    //   role: "",
+    //   image: "./src/img/horoscope.png",
+    //   imageAlt: "Screenshot of a simple website displaying daily horoscopes with a cute purple theme.",
+    //   gitHub: "https://github.com/PhillipDaum/horoscopes",
+    //   gitHubPages: "https://phillipdaum.github.io/horoscopes/",
+    //   aboutLink: ""
+    // }
     // Add more projects as needed
   ];
 
@@ -147,9 +150,6 @@ function App() {
             <FontAwesomeIcon className="fa-icon-large" icon={faGithub} /></a></li>
           <li><a href="https://yourresume.com" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon className="fa-icon-large" icon={faFileAlt} /></a></li>
-          {/* there isn't a leetcode in FA */}
-          {/* <li><a href="https://leetcode.com/yourusername" target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faLeetcode} /> LeetCode</a></li> */}
         </ul>
       </section>
 
@@ -167,6 +167,8 @@ function App() {
           ))}
         </div>
       </section>
+
+      {/* add space or divider between section */}
 
       <section className="projects-section">
         <h2 className="section-title">Projects</h2>
@@ -202,6 +204,7 @@ function App() {
       </section>
 
       {/* maybe additional section: art, hobbies, etc.  */}
+      {/* footer? */}
 
     </div>
   );
