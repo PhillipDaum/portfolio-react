@@ -24,7 +24,7 @@ function App() {
       year: "2024",
       description: "Turns a brain dump into a daily schedule",
       accolades: "Winner, Crowd Favorite, Girl Develop It Hackathon, 2024",
-      technologies: "React, Google Gemini API",
+      technologies: "React, Google Gemini API, CSS, Clerk API",
       role: "Lead Developer",
       image: "./src/img/portfolio-icecream.png", // add
       imageAlt: "whimsical and accessible ice cream order form with vibrant colors.",
@@ -35,42 +35,41 @@ function App() {
     {
       title: "Ice Cream Shop", 
       year: "2024",
-      description: "A short description of Project One.",
+      description: "App for creating and serving ice cream orders ",
       accolades: "",
-      technologies: "list", //add
+      technologies: "React",
       role: "",
-      image: "./src/img/portfolio-icecream.png",
-      imageAlt: "whimsical and accessible ice cream order form with vibrant colors.",
-      demoLink: "https://phillipdaum.github.io/cannons-coffee/", //fix
-      repoLink: "https://github.com/PhillipDaum/", //fix
+      image: "./src/img/portfolio-icecream.png", // change
+      imageAlt: "ice cream order form with vibrant colors",
+      demoLink: "https://ice-cream-order.netlify.app/",
+      repoLink: "https://github.com/PhillipDaum/ice-cream-shop",
       aboutLink: ""
     },
     {
       title: "Bento Grid", // old portfolio
       year: "2024",
-      // edit all descriptions
-      description: "A short description of Project One.",
+      description: "Dynamic CSS grid layout with three media queries",
       accolades: "",
-      technologies: "list", //add
+      technologies: "React, CSS Grid", //add
       role: "",
-      image: "./src/img/portfolio-icecream.png",
-      imageAlt: "whimsical and accessible ice cream order form with vibrant colors.",
-      demoLink: "https://phillipdaum.github.io/cannons-coffee/", //fix
-      repoLink: "https://github.com/PhillipDaum/", //fix
+      image: "./src/img/portfolio-icecream.png", // fix 
+      imageAlt: "App with colorful bento box style layout",
+      demoLink: "https://bento-box-grid.netlify.app/",
+      repoLink: "https://github.com/PhillipDaum/bento-box", //fix
       aboutLink: ""
     },
     {
-      title: "Cannon's Coffee",
+      title: "Sun Chase",
       year: "2024",
       // edit all descriptions
-      description: "A short description of Project One.",
+      description: "Find cities where it is likely to be sunny",
       accolades: "",
-      technologies: "list", //add
+      technologies: "JavaScript, Bootstrap", //add
       role: "",
-      image: "./src/img/portfolio-coffee.png",
-      imageAlt: "beautiful coffeeshop website with blue, yellow, green, and white accents.",
-      demoLink: "https://phillipdaum.github.io/cannons-coffee/",
-      repoLink: "https://github.com/PhillipDaum/cannons-coffee",
+      image: "./src/img/city-picker.png",
+      imageAlt: "App with a list of cities sorted by average monthly sunshine hours",
+      demoLink: "https://phillipdaum.github.io/sun-chase/",
+      repoLink: "https://github.com/PhillipDaum/sun-chase",
       aboutLink: ""
     },
     // {
