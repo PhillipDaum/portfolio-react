@@ -1,7 +1,8 @@
 import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faFileAlt, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+import { faFileAlt } from '@fortawesome/free-solid-svg-icons';
+import { Tooltip } from 'react-tooltip'
 
 function App() {
   // Skill categories and their contents
@@ -19,23 +20,23 @@ function App() {
   // then the old one for more stuff. 
   const projects = [
     {
-      title: "Focus Fox", // focus fox
+      title: "Focus Fox", 
       year: "2024",
-      // edit all descriptions
-      description: "A short description of Project One.",
-      technologies: "list", //add
+      description: "Turns a brain dump into a daily schedule",
+      accolades: "Winner, Crowd Favorite, Girl Develop It Hackathon, 2024",
+      technologies: "React, Google Gemini API",
       role: "Lead Developer",
-      image: "./src/img/portfolio-icecream.png",
+      image: "./src/img/portfolio-icecream.png", // add
       imageAlt: "whimsical and accessible ice cream order form with vibrant colors.",
-      demoLink: "https://phillipdaum.github.io/cannons-coffee/", //fix
-      repoLink: "https://github.com/PhillipDaum/", //fix
+      demoLink: "https://focus-fox-app.netlify.app/", //fix
+      repoLink: "https://github.com/Focus-Fox/focus-fox",
       aboutLink: "https://focus-fox.github.io/focusfoxpresentation/index.html"
     },
     {
-      title: "Ice Cream Shop", // bento grid
+      title: "Ice Cream Shop", 
       year: "2024",
-      // edit all descriptions
       description: "A short description of Project One.",
+      accolades: "",
       technologies: "list", //add
       role: "",
       image: "./src/img/portfolio-icecream.png",
@@ -49,6 +50,7 @@ function App() {
       year: "2024",
       // edit all descriptions
       description: "A short description of Project One.",
+      accolades: "",
       technologies: "list", //add
       role: "",
       image: "./src/img/portfolio-icecream.png",
@@ -62,6 +64,7 @@ function App() {
       year: "2024",
       // edit all descriptions
       description: "A short description of Project One.",
+      accolades: "",
       technologies: "list", //add
       role: "",
       image: "./src/img/portfolio-coffee.png",
@@ -76,6 +79,7 @@ function App() {
     //   // edit all descriptions
     //   description: "A short description of Project One.",
     //   technologies: "list", //add
+    //   accolades: "",
     //   role: "",
     //   image: "./src/img/portfolio-icecream.png",
     //   imageAlt: "whimsical and accessible ice cream order form with vibrant colors.",
@@ -88,6 +92,7 @@ function App() {
     //   year: "2024",
     //   // edit all descriptions
     //   description: "Building on my experience from Cannon's Coffee, I developed this Farmer's Market website based on detailed client-like specifications, adding JavaScript elements, including a responsive hamburger menu.",
+    //   accolades: "",
     //   technologies: "list", //add
     //   image: "./src/img/portfolio-fm.png",
     //   imageAlt: "farmer's market site featuring images of farm-fresh produce.",
@@ -100,6 +105,7 @@ function App() {
     //   year: "2024", // edit
     //   // edit all descriptions
     //   description: "City Picker came to life after I mastered loops. This project helps users find cities with the most sunshine during specific months, offering a practical tool for planning sunny getaways.",
+    //   accolades: "",
     //   technologies: "list", //add
     //   role: "",
     //   image: "./src/img/city-picker.png",
@@ -114,6 +120,7 @@ function App() {
     //   // edit desc
     //   description: "After a 6-week course on Bootstrap, I revamped my art portfolio site to showcase my artwork in a clean, modern layout, reflecting my growth as both a developer and an artist.",
     //   techololgies: "",
+    //   accolades: "",
     //   role: "",
     //   image: "./src/img/portfolio-art.png",
     //   imageAlt: "Screenshot of a tidy art portfolio site featuring a loud and colorful abstract painting.",
@@ -127,6 +134,7 @@ function App() {
     //   // edit desc
     //   description: "While learning to manipulate data objects, I created this Daily Horoscope site to provide users with their daily zodiac predictions in a fun and engaging way.",
     //   technologies: "",
+    //   accolades: "",
     //   role: "",
     //   image: "./src/img/horoscope.png",
     //   imageAlt: "Screenshot of a simple website displaying daily horoscopes with a cute purple theme.",
@@ -143,14 +151,24 @@ function App() {
       <section className="hero-section">
         <h1>Phil Daum</h1>
         <ul className="socials-list">
-          <li><a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+          <li><a className="linkedin-anchor" href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon className="fa-icon-large" icon={faLinkedin} /></a></li>
           {/* ADD LINK TO RESUME */}
-          <li><a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+          <li><a className="github-anchor" href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon className="fa-icon-large" icon={faGithub} /></a></li>
-          <li><a href="https://yourresume.com" target="_blank" rel="noopener noreferrer">
+            {/* how do I do this in React? */}
+          <li><a className="resume-anchor" href="https://yourresume.com" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon className="fa-icon-large" icon={faFileAlt} /></a></li>
         </ul>
+        <Tooltip anchorSelect=".linkedin-anchor" place="bottom">
+          LinkedIn
+        </Tooltip>
+        <Tooltip anchorSelect=".github-anchor" place="bottom">
+          GitHub
+        </Tooltip>
+        <Tooltip anchorSelect=".resume-anchor" place="bottom">
+          Resume
+        </Tooltip>
       </section>
 
       {/* add dashed line?  */}
