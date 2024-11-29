@@ -20,26 +20,26 @@ function App() {
   // then the old one for more stuff. 
   const projects = [
     {
-      title: "Focus Fox", 
+      title: "Focus Fox",
       year: "2024",
       description: "Turns a brain dump into a daily schedule",
       accolades: "Winner, Crowd Favorite, Girl Develop It Hackathon, 2024",
-      technologies: "React, Google Gemini API, CSS, Clerk API",
+      technologies: "React, JavaScript (ES6+), Google Gemini API, HTML5, CSS, Clerk API, Netlify",
       role: "Lead Developer",
-      image: "./src/img/portfolio-icecream.png", // add
+      image: "./src/img/focus-fox.png",
       imageAlt: "whimsical and accessible ice cream order form with vibrant colors.",
-      demoLink: "https://focus-fox-app.netlify.app/", //fix
+      demoLink: "https://focus-fox-app.netlify.app/",
       repoLink: "https://github.com/Focus-Fox/focus-fox",
       aboutLink: "https://focus-fox.github.io/focusfoxpresentation/index.html"
     },
     {
-      title: "Ice Cream Shop", 
+      title: "Ice Cream Shop",
       year: "2024",
       description: "App for creating and serving ice cream orders ",
       accolades: "",
-      technologies: "React",
+      technologies: "React, JavaScript (ES6+), HTML5, CSS",
       role: "",
-      image: "./src/img/portfolio-icecream.png", // change
+      image: "./src/img/portfolio-icecream.png", // Works for now
       imageAlt: "ice cream order form with vibrant colors",
       demoLink: "https://ice-cream-order.netlify.app/",
       repoLink: "https://github.com/PhillipDaum/ice-cream-shop",
@@ -50,7 +50,7 @@ function App() {
       year: "2024",
       description: "Dynamic CSS grid layout with three media queries",
       accolades: "",
-      technologies: "React, CSS Grid", //add
+      technologies: "React, JavaScript (ES6+), HTML5, CSS", //add
       role: "",
       image: "./src/img/portfolio-icecream.png", // fix 
       imageAlt: "App with colorful bento box style layout",
@@ -64,8 +64,7 @@ function App() {
       // edit all descriptions
       description: "Find cities where it is likely to be sunny",
       accolades: "",
-      technologies: "JavaScript, Bootstrap", //add
-      role: "",
+      technologies: "JavaScript, Bootstrap, HTML5",
       image: "./src/img/city-picker.png",
       imageAlt: "App with a list of cities sorted by average monthly sunshine hours",
       demoLink: "https://phillipdaum.github.io/sun-chase/",
@@ -155,7 +154,7 @@ function App() {
           {/* ADD LINK TO RESUME */}
           <li><a className="github-anchor" href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon className="fa-icon-large" icon={faGithub} /></a></li>
-            {/* how do I do this in React? */}
+          {/* how do I do this in React? */}
           <li><a className="resume-anchor" href="https://yourresume.com" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon className="fa-icon-large" icon={faFileAlt} /></a></li>
         </ul>
@@ -203,8 +202,10 @@ function App() {
                 </div>
                 {/* wrap this in an a tag with a link to live demo */}
                 <img src={project.image} alt={project.imageAlt} />
-                <p className="project-description">{project.description}</p>
-                <p className="project-technologies">technologies: {project.technologies}</p>
+                <div className='project-card-about'>
+                  <p className="project-description">{'\u2022'} {project.description}</p>
+                  <p className="project-technologies">{'\u2022'} {project.technologies}</p>
+                </div>
                 <div className="project-card-links">
                   <a className="project-demo" href={project.demoLink} target="_blank" rel="noopener noreferrer">live demo</a>
                   <a className="project-repo" href={project.repoLink} target="_blank" rel="noopener noreferrer">repository</a>
