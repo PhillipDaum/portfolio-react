@@ -27,7 +27,7 @@ function App() {
       technologies: "React, JavaScript (ES6+), Google Gemini API, HTML5, CSS, Clerk API, Netlify",
       role: "Lead Developer",
       image: "./src/img/focus-fox.png",
-      imageAlt: "whimsical and accessible ice cream order form with vibrant colors.",
+      imageAlt: "App with calm colors, a chatbox and a kanban board",
       demoLink: "https://focus-fox-app.netlify.app/",
       repoLink: "https://github.com/Focus-Fox/focus-fox",
       aboutLink: "https://focus-fox.github.io/focusfoxpresentation/index.html"
