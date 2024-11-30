@@ -7,17 +7,13 @@ import { Tooltip } from 'react-tooltip'
 function App() {
   // Skill categories and their contents
   const skills = [
-    { category: "Programming Languages", items: ["JavaScript"] },
-    { category: "Web Technologies", items: ["React", "Node.js", "HTML", "CSS", "RESTful APIs", "Bootstrap", "WordPress"] },
+    { category: "Programming Languages", items: ["JavaScript (ES6+)"] },
+    { category: "Web Technologies", items: ["React", "Node.js", "HTML5", "CSS", "RESTful APIs", "Bootstrap", "WordPress"] },
     { category: "Tools & Platforms", items: ["Git", "GitHub", "Terminal/CLI", "Azure", "Generative AI"] },
     { category: "Soft Skills", items: ["Public Speaking", "Teamwork", "Screen Sharing & Remote Collaboration", "Project Management"] },
   ];
 
   // Project details
-  /// if role, if aboutLink 
-  // Focus Fox, Ice Cream Shop, Bento Box, Salary Calculator
-  // a NASA one? two?
-  // then the old one for more stuff. 
   const projects = [
     {
       title: "Focus Fox",
@@ -52,7 +48,7 @@ function App() {
       accolades: "",
       technologies: "React, JavaScript (ES6+), HTML5, CSS", //add
       role: "",
-      image: "./src/img/portfolio-icecream.png", // fix 
+      image: "./src/img/bento-box.png", // fix 
       imageAlt: "App with colorful bento box style layout",
       demoLink: "https://bento-box-grid.netlify.app/",
       repoLink: "https://github.com/PhillipDaum/bento-box", //fix
@@ -61,7 +57,6 @@ function App() {
     {
       title: "Sun Chase",
       year: "2024",
-      // edit all descriptions
       description: "Find cities where it is likely to be sunny",
       accolades: "",
       technologies: "JavaScript, Bootstrap, HTML5",
@@ -71,35 +66,33 @@ function App() {
       repoLink: "https://github.com/PhillipDaum/sun-chase",
       aboutLink: ""
     },
+    {
+      title: "NASA Picture of the Day",
+      year: "2024",
+      description: "Displays recent photos from NASA's Astronomy Picture of the Day API",
+      technologies: "React, JavaScript (ES6+), NASA APOD API, HTML5, CSS",
+      accolades: "",
+      role: "",
+      image: "./src/img/nasa.png",
+      imageAlt: "Basic web app with astronomy photos and descriptions",
+      demoLink: "https://lighthearted-taffy-130ff3.netlify.app/", 
+      repoLink: "https://github.com/PhillipDaum/nasa-react", 
+      aboutLink: ""
+    },
+    {
+      title: "Income Tax Calculator",
+      year: "2024",
+      description: "Calculates income tax based on data entered",
+      accolades: "",
+      technologies: "JavaScript, HTML5, CSS",
+      image: "./src/img/income-tax.png",
+      imageAlt: "A styled form for entering income information and an image of a wallet",
+      demoLink: "https://phillipdaum.github.io/salary-calculator/", 
+      repoLink: "https://github.com/PhillipDaum/salary-calculator",
+      aboutLink: ""
+    },
     // {
-    //   title: "Ice Cream",
-    //   year: "2024",
-    //   // edit all descriptions
-    //   description: "A short description of Project One.",
-    //   technologies: "list", //add
-    //   accolades: "",
-    //   role: "",
-    //   image: "./src/img/portfolio-icecream.png",
-    //   imageAlt: "whimsical and accessible ice cream order form with vibrant colors.",
-    //   demoLink: "https://phillipdaum.github.io/cannons-coffee/", //fix
-    //   repoLink: "https://github.com/PhillipDaum/", //fix
-    //   aboutLink: ""
-    // },
-    // {
-    //   title: "Farmer's Market",
-    //   year: "2024",
-    //   // edit all descriptions
-    //   description: "Building on my experience from Cannon's Coffee, I developed this Farmer's Market website based on detailed client-like specifications, adding JavaScript elements, including a responsive hamburger menu.",
-    //   accolades: "",
-    //   technologies: "list", //add
-    //   image: "./src/img/portfolio-fm.png",
-    //   imageAlt: "farmer's market site featuring images of farm-fresh produce.",
-    //   demoLink: "https://phillipdaum.github.io/cannons-coffee/", // fix
-    //   repoLink: "https://github.com/PhillipDaum/", //fix
-    //   aboutLink: ""
-    // },
-    // {
-    //   title: "City Picker",
+    //   title: "Old Portfolio",
     //   year: "2024", // edit
     //   // edit all descriptions
     //   description: "City Picker came to life after I mastered loops. This project helps users find cities with the most sunshine during specific months, offering a practical tool for planning sunny getaways.",
@@ -127,7 +120,7 @@ function App() {
     //   aboutLink: ""
     // },
     // {
-    //   title: "Daily Horoscope",
+    //   title: "Hurricane Harvey Art",
     //   year: "2024",
     //   // edit desc
     //   description: "While learning to manipulate data objects, I created this Daily Horoscope site to provide users with their daily zodiac predictions in a fun and engaging way.",
@@ -169,22 +162,16 @@ function App() {
         </Tooltip>
       </section>
 
-      {/* add dashed line?  */}
-
       <section className="skills-section">
         <h2>Skills</h2>
-        {/* maybe put in a box that looks like a paper */}
         <div className="skills-list">
           {skills.map((skill, index) => (
             <div key={index} className="skill-category">
-              {/* add extra space between category and list */}
               <h3 className="category-title">{skill.category}:  <span className="skill-items">{skill.items.join(", ")}</span></h3>
             </div>
           ))}
         </div>
       </section>
-
-      {/* add space or divider between section */}
 
       <section className="projects-section">
         <h2 className="section-title">Projects</h2>
@@ -200,11 +187,17 @@ function App() {
                   ) : (null)
                   }
                 </div>
-                {/* wrap this in an a tag with a link to live demo */}
                 <img src={project.image} alt={project.imageAlt} />
                 <div className='project-card-about'>
-                  <p className="project-description">{'\u2022'} {project.description}</p>
-                  <p className="project-technologies">{'\u2022'} {project.technologies}</p>
+                  <ul className="ul">
+                  {project.accolades != "" ? (
+                    <li className="project-accolades">{project.accolades}</li>
+                  ) : (null)
+                }
+                    <li className='project-description'>{project.description}</li>
+                    <li className='project-technologies'>{project.technologies}</li>
+                  </ul>
+        
                 </div>
                 <div className="project-card-links">
                   <a className="project-demo" href={project.demoLink} target="_blank" rel="noopener noreferrer">live demo</a>

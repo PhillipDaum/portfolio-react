@@ -16,9 +16,6 @@
   --font-monospace: 'Source Code Pro', monospace;
 }
 
-/* utility classes */
-/* none so far!  */
-
 /* typography */
 h2 {
   color: var(--headings)
@@ -95,6 +92,9 @@ h1 {
 /* consider some centering: images, text looks ragged */
 /* incorporate monospace text */
 /* work on spacing */
+.projects-section {
+  padding-top: 2rem;
+}
 .projects-container {
   display: flex;
   flex-direction: column;
@@ -130,7 +130,9 @@ h1 {
 }
 .project-card-about {
   align-self: start;
-  padding: .4rem;
+}
+.project-card-about li {
+  margin-bottom: .5rem ;
 }
 .project-card-links {
   display: flex;
