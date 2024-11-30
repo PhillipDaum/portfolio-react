@@ -9,8 +9,8 @@ function App() {
   const skills = [
     { category: "Programming Languages", items: ["JavaScript (ES6+)"] },
     { category: "Web Technologies", items: ["React", "Node.js", "HTML5", "CSS", "RESTful APIs", "Bootstrap", "WordPress"] },
-    { category: "Tools & Platforms", items: ["Git", "GitHub", "Terminal/CLI", "Azure", "Generative AI"] },
-    { category: "Soft Skills", items: ["Public Speaking", "Teamwork", "Screen Sharing & Remote Collaboration", "Project Management"] },
+    { category: "Tools & Platforms", items: ["Git", "GitHub", "Terminal/CLI", "Microsoft Azure", "Generative AI"] },
+    { category: "Soft Skills", items: ["Public Speaking", "Education", "Teamwork", "Screen Sharing & Remote Collaboration", "Project Management"] },
   ];
 
   // Project details
@@ -19,7 +19,7 @@ function App() {
       title: "Focus Fox",
       year: "2024",
       description: "Turns a brain dump into a daily schedule",
-      accolades: "Winner, Crowd Favorite, Girl Develop It Hackathon, 2024",
+      accolades: "Winner, Crowd Favorite, Girl Develop It Hackathon 2024",
       technologies: "React, JavaScript (ES6+), Google Gemini API, HTML5, CSS, Clerk API, Netlify",
       role: "Lead Developer",
       image: "./src/img/focus-fox.png",
@@ -42,16 +42,15 @@ function App() {
       aboutLink: ""
     },
     {
-      title: "Bento Grid", // old portfolio
-      year: "2024",
+      title: "Bento Grid",
       description: "Dynamic CSS grid layout with three media queries",
       accolades: "",
-      technologies: "React, JavaScript (ES6+), HTML5, CSS", //add
+      technologies: "React, JavaScript (ES6+), HTML5, CSS",
       role: "",
-      image: "./src/img/bento-box.png", // fix 
+      image: "./src/img/bento-box.png",
       imageAlt: "App with colorful bento box style layout",
       demoLink: "https://bento-box-grid.netlify.app/",
-      repoLink: "https://github.com/PhillipDaum/bento-box", //fix
+      repoLink: "https://github.com/PhillipDaum/bento-box",
       aboutLink: ""
     },
     {
@@ -75,8 +74,8 @@ function App() {
       role: "",
       image: "./src/img/nasa.png",
       imageAlt: "Basic web app with astronomy photos and descriptions",
-      demoLink: "https://lighthearted-taffy-130ff3.netlify.app/", 
-      repoLink: "https://github.com/PhillipDaum/nasa-react", 
+      demoLink: "https://lighthearted-taffy-130ff3.netlify.app/",
+      repoLink: "https://github.com/PhillipDaum/nasa-react",
       aboutLink: ""
     },
     {
@@ -87,53 +86,49 @@ function App() {
       technologies: "JavaScript, HTML5, CSS",
       image: "./src/img/income-tax.png",
       imageAlt: "A styled form for entering income information and an image of a wallet",
-      demoLink: "https://phillipdaum.github.io/salary-calculator/", 
+      demoLink: "https://phillipdaum.github.io/salary-calculator/",
       repoLink: "https://github.com/PhillipDaum/salary-calculator",
       aboutLink: ""
     },
-    // {
-    //   title: "Old Portfolio",
-    //   year: "2024", // edit
-    //   // edit all descriptions
-    //   description: "City Picker came to life after I mastered loops. This project helps users find cities with the most sunshine during specific months, offering a practical tool for planning sunny getaways.",
-    //   accolades: "",
-    //   technologies: "list", //add
-    //   role: "",
-    //   image: "./src/img/city-picker.png",
-    //   imageAlt: "site showing 'when and where is it sunny?' with a form for continent and month, listing cities by sunshine hours.", //edit
-    //   demoLink: "https://phillipdaum.github.io/city-picker/",
-    //   repoLink: "https://github.com/PhillipDaum/city-picker",
-    //   aboutLink: ""
-    // },
-    // {
-    //   title: "PhilDaum.art",
-    //   year: "2022", //edit, check
-    //   // edit desc
-    //   description: "After a 6-week course on Bootstrap, I revamped my art portfolio site to showcase my artwork in a clean, modern layout, reflecting my growth as both a developer and an artist.",
-    //   techololgies: "",
-    //   accolades: "",
-    //   role: "",
-    //   image: "./src/img/portfolio-art.png",
-    //   imageAlt: "Screenshot of a tidy art portfolio site featuring a loud and colorful abstract painting.",
-    //   demoLink: "https://github.com/PhillipDaum/phildaum.art",
-    //   repoLink: "https://www.phildaum.art/",
-    //   aboutLink: ""
-    // },
-    // {
-    //   title: "Hurricane Harvey Art",
-    //   year: "2024",
-    //   // edit desc
-    //   description: "While learning to manipulate data objects, I created this Daily Horoscope site to provide users with their daily zodiac predictions in a fun and engaging way.",
-    //   technologies: "",
-    //   accolades: "",
-    //   role: "",
-    //   image: "./src/img/horoscope.png",
-    //   imageAlt: "Screenshot of a simple website displaying daily horoscopes with a cute purple theme.",
-    //   gitHub: "https://github.com/PhillipDaum/horoscopes",
-    //   gitHubPages: "https://phillipdaum.github.io/horoscopes/",
-    //   aboutLink: ""
-    // }
-    // Add more projects as needed
+    {
+      title: "Old Portfolio",
+      year: "2024",
+      description: "Older portfolio site with even more projects",
+      accolades: "",
+      technologies: "Vanilla JavaScript, HTML5, CSS",
+      role: "",
+      image: "./src/img/city-picker.png",
+      imageAlt: "individual art portfolio site with colorful paintings",
+      demoLink: "https://www.phildaum.art/",
+      repoLink: "https://github.com/PhillipDaum/city-picker",
+      aboutLink: ""
+    },
+    {
+      title: "PhilDaum.art",
+      year: "2023",
+      description: "Responsive art portfolio site",
+      technologies: "Bootstrap, HTML5, Vanilla JavaScript",
+      accolades: "",
+      role: "",
+      image: "./src/img/art-portfolio.png",
+      imageAlt: "Screenshot of a tidy art portfolio site featuring a loud and colorful abstract painting.",
+      demoLink: "https://www.phildaum.art/",
+      repoLink: "https://github.com/PhillipDaum/phildaum.art",
+      aboutLink: ""
+    },
+    {
+      title: "Hurricane Harvey Art",
+      year: "2017",
+      description: "Fundraiser with e-commerce website and fulfillment center",
+      technologies: "WordPress, Shopify, Paypal API ",
+      accolades: "",
+      role: "",
+      image: "./src/img/kid-art.jpg",
+      imageAlt: "Child's drawing of a hurricane",
+      demoLink: "",
+      repoLink: "",
+      aboutLink: "https://blogs.houstonisd.org/news/2017/09/28/hurricane-art-by-hisd-students-on-sale-to-raise-money-for-hurricane-relief/"
+    }
   ];
 
   return (
@@ -142,13 +137,11 @@ function App() {
       <section className="hero-section">
         <h1>Phil Daum</h1>
         <ul className="socials-list">
-          <li><a className="linkedin-anchor" href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+          <li><a className="linkedin-anchor" href="https://www.linkedin.com/in/daumphil/" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon className="fa-icon-large" icon={faLinkedin} /></a></li>
-          {/* ADD LINK TO RESUME */}
-          <li><a className="github-anchor" href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+          <li><a className="github-anchor" href="https://github.com/PhillipDaum" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon className="fa-icon-large" icon={faGithub} /></a></li>
-          {/* how do I do this in React? */}
-          <li><a className="resume-anchor" href="https://yourresume.com" target="_blank" rel="noopener noreferrer">
+          <li><a className="resume-anchor" href="/Phil-Daum_resume.pdf" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon className="fa-icon-large" icon={faFileAlt} /></a></li>
         </ul>
         <Tooltip anchorSelect=".linkedin-anchor" place="bottom">
@@ -190,19 +183,25 @@ function App() {
                 <img src={project.image} alt={project.imageAlt} />
                 <div className='project-card-about'>
                   <ul className="ul">
-                  {project.accolades != "" ? (
-                    <li className="project-accolades">{project.accolades}</li>
-                  ) : (null)
-                }
+                    {project.accolades != "" ? (
+                      <li className="project-accolades">{project.accolades}</li>
+                    ) : (null)
+                    }
                     <li className='project-description'>{project.description}</li>
                     <li className='project-technologies'>{project.technologies}</li>
                   </ul>
-        
+
                 </div>
                 <div className="project-card-links">
-                  <a className="project-demo" href={project.demoLink} target="_blank" rel="noopener noreferrer">live demo</a>
-                  <a className="project-repo" href={project.repoLink} target="_blank" rel="noopener noreferrer">repository</a>
-                  {/* is there a better way to do this without the empty strings? */}
+                  {/* Is there a better way to accomplish this? */}
+                  {project.demoLink != "" ? (
+                    <a className="project-role" href={project.demoLink} target="_blank" rel="noopener noreferrer">live demo</a>
+                  ) : (null)
+                  }
+                  {project.repoLink != "" ? (
+                    <a className="project-role" href={project.repoLink} target="_blank" rel="noopener noreferrer">repository</a>
+                  ) : (null)
+                  }
                   {project.aboutLink != "" ? (
                     <a className="project-role" href={project.aboutLink} target="_blank" rel="noopener noreferrer">about</a>
                   ) : (null)
