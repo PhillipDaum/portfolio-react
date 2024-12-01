@@ -97,8 +97,8 @@ function App() {
       accolades: "",
       technologies: "Vanilla JavaScript, HTML5, CSS",
       role: "",
-      image: "./img/city-picker.png",
-      imageAlt: "individual art portfolio site with colorful paintings",
+      image: "./img/old-portfolio.png",
+      imageAlt: "",
       demoLink: "https://www.phildaum.art/",
       repoLink: "https://github.com/PhillipDaum/city-picker",
       aboutLink: ""
