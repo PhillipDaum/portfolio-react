@@ -99,8 +99,8 @@ function App() {
       role: "",
       image: "./img/old-portfolio.png",
       imageAlt: "",
-      demoLink: "https://www.phildaum.art/",
-      repoLink: "https://github.com/PhillipDaum/city-picker",
+      demoLink: "https://phillipdaum.github.io/phil-the-homepage/",
+      repoLink: "https://github.com/PhillipDaum/phil-the-homepage",
       aboutLink: ""
     },
     {
