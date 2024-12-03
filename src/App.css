@@ -6,10 +6,7 @@
   /* text */
   --text-main: #a6d9f7;
   --headings: #84dccf;
-  --sub-heading: #BF98a0;
-
-  --section-title-color: #BCCE0;
-  --link-color: #84dccf;
+  --sub-heading: #DAC3CB;
 
   /* Fonts */
   --font-main: 'Roboto', sans-serif;
@@ -36,6 +33,11 @@ body {
 }
 
 /* hero section */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 h1 {
   color: var(--headings);
   font-size: 2.5rem;
@@ -52,20 +54,37 @@ h1 {
   display: flex;
   gap: .8rem;
   justify-content: center;
+  margin-bottom: 0px;
 }
 .socials-list a {
-  color: var(--link-color);
+  color: var(--text-main);
   text-decoration: none;
 }
 .fa-icon-large:hover {
-  /* maybe change color */
   color: var(--sub-heading)
+}
+.socials-list svg {
+  fill: var(--text-main);
+}
+.socials-list svg:hover {
+  fill: var(--sub-heading);
 }
 .hero-section {
   padding-bottom: 4rem;
   padding-top: 2rem;
 }
-
+.about-me {
+  display: flex;
+  align-items: center;
+}
+.about-me h2 {
+  font-size: 1.3rem;
+  color: var(--sub-heading);
+}
+.arrow {
+  color: var(--headings);
+  font-size: 4rem;
+}
 
 /* Skills Section */
 .skill-category {
@@ -89,9 +108,6 @@ h1 {
 }
 
 /* Projects Section */
-/* consider some centering: images, text looks ragged */
-/* incorporate monospace text */
-/* work on spacing */
 .projects-section {
   padding-top: 2rem;
 }
@@ -150,12 +166,7 @@ h1 {
   background-color: var(--sub-heading);
 }
 
-
-
 /* media queries */
-/* only go to two columns, prolly no 3 columns */
-/* can I add a condition that says if there are an odd # of cards, 
-put the bottom one in two cols? */
 @media (min-width: 650px) {
   .projects-grid {
       grid-template-columns: 1fr 1fr;
