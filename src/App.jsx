@@ -16,6 +16,7 @@ function App() {
         "HTML5",
         "CSS",
         "RESTful APIs",
+        "Chakra UI",
         "Bootstrap",
         "WordPress",
       ],
@@ -44,6 +45,20 @@ function App() {
 
   // Project details
   const projects = [
+    {
+      title: "Where in the World?",
+      year: "2025",
+      description: "Search and filter the countries of the world",
+      accolades: "",
+      technologies:
+        "React, JavaScript (ES6+), Chakra UI, REST Countries API, Netlify",
+      role: "",
+      image: "./img/world-countries.png",
+      imageAlt: "App with calm colors, a chatbox and a kanban board",
+      demoLink: "https://delightful-otter-718495.netlify.app/",
+      repoLink: "https://github.com/PhillipDaum/countries-api-project",
+      aboutLink: "",
+    },
     {
       title: "Focus Fox",
       year: "2024",
