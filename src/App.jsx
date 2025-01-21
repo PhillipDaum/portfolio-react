@@ -4,6 +4,8 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faFileAlt } from "@fortawesome/free-solid-svg-icons";
 import { Tooltip } from "react-tooltip";
 
+// add indentation to skills if they are on a second line.
+
 function App() {
   // Skill categories and their contents
   const skills = [
@@ -12,6 +14,7 @@ function App() {
       category: "Web Technologies",
       items: [
         "React",
+        "Vite",
         "Node.js",
         "HTML5",
         "CSS",
