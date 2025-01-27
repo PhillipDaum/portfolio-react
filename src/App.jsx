@@ -59,6 +59,7 @@ function App() {
       image: "./img/world-countries.png",
       imageAlt: "App with calm colors, a chatbox and a kanban board",
       demoLink: "https://delightful-otter-718495.netlify.app/",
+      demoVideo: "",
       repoLink: "https://github.com/PhillipDaum/countries-api-project",
       aboutLink: "",
     },
@@ -72,9 +73,10 @@ function App() {
       role: "Lead Developer",
       image: "./img/focus-fox.png",
       imageAlt: "App with calm colors, a chatbox and a kanban board",
-      demoLink: "https://focus-fox-app.netlify.app/",
+      demoLink: "",
+      demoVideo: "https://www.youtube.com/watch?v=sR8jJ10IKKQ",
       repoLink: "https://github.com/Focus-Fox/focus-fox",
-      aboutLink: "https://focus-fox.github.io/focusfoxpresentation/index.html",
+      aboutLink: "",
     },
     {
       title: "Ice Cream Shop",
@@ -86,6 +88,7 @@ function App() {
       image: "./img/portfolio-icecream.png", // Works for now
       imageAlt: "ice cream order form with vibrant colors",
       demoLink: "https://ice-cream-order.netlify.app/",
+      demoVideo: "",
       repoLink: "https://github.com/PhillipDaum/ice-cream-shop",
       aboutLink: "",
     },
@@ -98,6 +101,7 @@ function App() {
       image: "./img/bento-box.png",
       imageAlt: "App with colorful bento box style layout",
       demoLink: "https://bento-box-grid.netlify.app/",
+      demoVideo: "",
       repoLink: "https://github.com/PhillipDaum/bento-box",
       aboutLink: "",
     },
@@ -111,6 +115,7 @@ function App() {
       imageAlt:
         "App with a list of cities sorted by average monthly sunshine hours",
       demoLink: "https://phillipdaum.github.io/sun-chase/",
+      demoVideo: "",
       repoLink: "https://github.com/PhillipDaum/sun-chase",
       aboutLink: "",
     },
@@ -125,6 +130,7 @@ function App() {
       image: "./img/nasa.png",
       imageAlt: "Basic web app with astronomy photos and descriptions",
       demoLink: "https://lighthearted-taffy-130ff3.netlify.app/",
+      demoVideo: "",
       repoLink: "https://github.com/PhillipDaum/nasa-react",
       aboutLink: "",
     },
@@ -151,6 +157,7 @@ function App() {
       image: "./img/old-portfolio.png",
       imageAlt: "",
       demoLink: "https://phillipdaum.github.io/phil-the-homepage/",
+      demoVideo: "",
       repoLink: "https://github.com/PhillipDaum/phil-the-homepage",
       aboutLink: "",
     },
@@ -165,6 +172,7 @@ function App() {
       imageAlt:
         "Screenshot of a tidy art portfolio site featuring a loud and colorful abstract painting.",
       demoLink: "https://www.phildaum.art/",
+      demoVideo: "",
       repoLink: "https://github.com/PhillipDaum/phildaum.art",
       aboutLink: "",
     },
@@ -178,6 +186,7 @@ function App() {
       image: "./img/kid-art.jpg",
       imageAlt: "Child's drawing of a hurricane",
       demoLink: "",
+      demoVideo: "",
       repoLink: "",
       aboutLink:
         "https://blogs.houstonisd.org/news/2017/09/28/hurricane-art-by-hisd-students-on-sale-to-raise-money-for-hurricane-relief/",
@@ -295,10 +304,9 @@ function App() {
                   </ul>
                 </div>
                 <div className="project-card-links">
-                  {/* Is there a better way to accomplish this? */}
                   {project.demoLink != "" ? (
                     <a
-                      className="project-role"
+                      className=""
                       href={project.demoLink}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -306,9 +314,19 @@ function App() {
                       live demo
                     </a>
                   ) : null}
+                  {project.demoVideo != "" ? (
+                    <a
+                      className=""
+                      href={project.demoVideo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      video
+                    </a>
+                  ) : null}
                   {project.repoLink != "" ? (
                     <a
-                      className="project-role"
+                      className=""
                       href={project.repoLink}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -318,7 +336,7 @@ function App() {
                   ) : null}
                   {project.aboutLink != "" ? (
                     <a
-                      className="project-role"
+                      className=""
                       href={project.aboutLink}
                       target="_blank"
                       rel="noopener noreferrer"
